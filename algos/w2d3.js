@@ -54,21 +54,50 @@
 
     }
 
+    function symmetricDifferenceEvenBetter(setA, setB){
+        const diff = [];
+
+        const seen1 = {};
+        const seen2 = {};
+
+        for(let num of setA){
+            seen1[num] = num;
+        }
+
+        for(let num of setB){
+            seen2[num] = num;
+        }
+
+        for( let key in seen1){
+            if(seen2[key] === undefined){
+                diff.push(seen1[key]);
+            }
+        }
+
+        for( let key in seen2){
+            if(seen1[key] === undefined){
+                diff.push(seen2[key]);
+            }
+        }
+
+        return diff;
+    }
+
 
 
     function dedupeSorted(nums) {
         var i = nums.length-1;
         var newArr = [];
         while(i>=0){
-          if(nums[i] == nums[i-1]){
+        if(nums[i] == nums[i-1]){
             i--
-          }else{
+        }else{
             newArr.push(nums[i]);
             i--;
-          }
+        }
         }
         return newArr.sort();
-      }
-      
+    }
+    
 console.log(symmetricDifference(nums1, nums2))
 console.log(symmetricDifferenceBetter(nums1, nums2))
