@@ -16,7 +16,7 @@ const Planet = props => {
     
     useEffect(()=>{
         axiosPlanet()
-    },[])
+    },[id])
     
     const axiosPlanet = () => {
         axios.get(`https://swapi.dev/api/planets/${id}`)

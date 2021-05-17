@@ -16,11 +16,14 @@ function App() {
     setId(e.target.value);
   }
 
-  const goToPage = () => {
+  const goToPage = (e) => {
+    e.preventDefault();
+    console.log(item);
     navigate("/"+ item + "/"+id);
   }
 
   const itemHandler = (e) => {
+    console.log(e.target.value);
     setItem(e.target.value);
     // setItem({item})
   }

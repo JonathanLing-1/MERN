@@ -1,0 +1,9 @@
+https://pokeapi.co/api/v2/pokemon/ditto/
+
+https://pokeapi.co/api/v2/pokemon/20
+
+https://pokeapi.co/api/v2/pokemon/204
+
+https://pokeapi.co/api/v2/type/3
+
+https://pokeapi.co/api/v2/ability/1

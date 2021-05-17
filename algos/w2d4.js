@@ -44,6 +44,7 @@ console.log(allNonConsecutive(nums))
     
     findConsqSums(nums, sum) should return:
     [
+
         [2, 5, 3, 6],
         [3, 6, 7]
     ]

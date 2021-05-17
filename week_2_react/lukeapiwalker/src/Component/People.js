@@ -23,7 +23,7 @@ const People = props => {
     
     useEffect(()=> {
         axiosPerson()
-    },[])
+    },[id])
 
 
 
