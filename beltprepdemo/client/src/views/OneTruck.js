@@ -26,7 +26,7 @@ const OneTruck = props => {
     const [review, setReview] = useState(initialReview)
     const [errors, setErrors] = useState(initialErrors)
 
-    useEffect = (() => {
+    useEffect(() => {
         axios.get(`http://localhost:8000/api/trucks/${id}`)
             .then( response => setTruck(response.data.results))
             .catch(err => navigate('/'))
