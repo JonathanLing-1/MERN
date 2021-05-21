@@ -27,7 +27,7 @@ module.exports = {
     addQuote: (req, res) => {
         Author.findByIdAndUpdate(req.params._id, { $push: { quotes: req.body}}, { new:true, runValidators: true})
             .then(author => res.json({message : "success", results: author}))
-            .catch(err => res.json({message: "error", results : err}) );
+            .catch(err => res.json({message: "error", results : err.errors.quotes ? err.errors.quotes : err}) );
     },
     // Delete
     deleteAuthor: (req, res ) => {

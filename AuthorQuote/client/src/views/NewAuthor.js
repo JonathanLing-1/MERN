@@ -26,7 +26,7 @@ const NewAuthor = () => {
             .then(response => {
                 const { message, results } = response.data
                 if( message === "success"){
-                    navigate(`/author/${results._id}`)
+                    navigate(`/`)
                 } else {
                     const newErrors = {...initialErrors};
                     for(const key in results.errors){
@@ -41,7 +41,7 @@ const NewAuthor = () => {
 
     return (
         <div>
-            <Form author = { author } changeHandler= { changeHandler} submitHandler= {submitHandler} errors = {errors} ></Form>
+            <Form author = { author } changeHandler= { changeHandler} submitHandler= {submitHandler} errors = {errors} action = "name"></Form>
         </div>
     )
 }
